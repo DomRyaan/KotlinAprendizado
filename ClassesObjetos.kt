@@ -1,5 +1,4 @@
-package com.exemplo.aprendendokotlinzero
-
+package com.exemplo.aprendendokotlinzero;
 
 class Player (// Construtor primário
     // Propriedades de uma Classe
@@ -7,6 +6,12 @@ class Player (// Construtor primário
     var nickname: String = ""
 )
 {
+    // Modificadores de acesso
+    public var panda = "Modificador publico, e o modificador padrão em Kotlin. Visivel em todo lugar. Ele é o modificador padrão do Kotlin"
+    private var panda2 = "Torna visivel apenas dentro da classe"
+    protected var panda3 = "Torna visivel apenas na classe e subClasses"
+    internal var panda4 = "Visivel em todo lugar dentro de um módulo"
+
     init {// Chamado assim que um objeto é criado
         println("Objeto inicializado")
         println("Nome: $nome" +

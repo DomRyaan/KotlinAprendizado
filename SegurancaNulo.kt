@@ -1,5 +1,6 @@
 package com.exemplo.aprendendokotlinzero;
 
+/*
 class Carro {
     var cor = "Vermelho"
 
@@ -19,3 +20,4 @@ fun main() {
     print(cor)
 
 }
+ */
