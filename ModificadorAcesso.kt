@@ -1,7 +1,5 @@
 package com.exemplo.aprendendokotlinzero
 
-import com.exemplo.aprendendokotlinzero.teste.*
-
 // Modificadores de acesso
 /*
 public = "Modificador publico, e o modificador padrão em Kotlin. Visivel em todo lugar. Ele é o modificador padrão do Kotlin"

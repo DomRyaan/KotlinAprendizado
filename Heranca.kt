@@ -56,7 +56,6 @@ fun main() {
 
     val cao = Cao()
     val passaro = Passaro()
-    
 
     cao.cor = "Preto"
     passaro.cor = "Azul"
