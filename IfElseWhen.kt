@@ -36,7 +36,7 @@ fun main() {
         else -> print("Nenhuma das anteriores")
     }
     */
-
+/*
     var nome = "Ryan"
 
     if ("a" in nome){
@@ -44,5 +44,6 @@ fun main() {
     } else
     {
         print("Não tem essa letra no nome")
-    }
+    }*/
+
 }

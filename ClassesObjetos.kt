@@ -1,11 +1,12 @@
 package com.exemplo.aprendendokotlinzero;
 
-class Player (// Construtor primário
+class Player(
+    // Construtor primário
     // Propriedades de uma Classe
-    var kart: String = "",
-    var nickname: String = ""
+    var kart: String = ""
 )
 {
+    lateinit var nickname: String
     // Modificadores de acesso
     public var panda = "Modificador publico, e o modificador padrão em Kotlin. Visivel em todo lugar. Ele é o modificador padrão do Kotlin"
     private var panda2 = "Torna visivel apenas dentro da classe"
@@ -20,10 +21,13 @@ class Player (// Construtor primário
     }
 
     // Construtor Secundario
+    /*
     constructor(nickname: String): this(kart = "", nickname) // Chamando o construtor primário (Obrigatorio)
     {
         println("Construtor Secundario chamado")
     }
+
+     */
 
     fun getKart(){
         println(this.kart)
@@ -58,5 +62,6 @@ class Player (// Construtor primário
 fun main() {
 
     val player = Player("Kart do Donkey Kong")
+    player.nickname = "Moskei"
 
 }
