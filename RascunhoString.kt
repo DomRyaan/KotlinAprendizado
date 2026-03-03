@@ -24,12 +24,15 @@ fun main() {
 
     val fomatador = DateTimeFormatter.ofPattern("E", localizar)
 
-    val horario = "A COLETA DE HOJE VAI SER APARTIR DAS 19:45"
+    val horario = "A COLETA DE HOJE VAI SER APARTIR DAS 19:45 DE SEG A SEX"
 
     val regexNãoDigito = """\D""".toRegex()
 
     val apenasNumero = regexNãoDigito.replace(horario,"")
 
-    println("Horario: ${apenasNumero.take(2)}")
 
+    val hora = apenasNumero.substring(0, 2).toIntOrNull() ?: 18
+
+    val minuto = if (apenasNumero.length >= 4) apenasNumero.substring(2, 4).toIntOrNull() ?: 0 else 0
+    println(minuto)
 }

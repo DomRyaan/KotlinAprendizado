@@ -1,5 +1,7 @@
 package com.exemplo.aprendendokotlinzero
 
+import java.util.zip.DeflaterOutputStream
+
 class Matematica {
 
     // Função Normal
@@ -13,13 +15,54 @@ class Matematica {
 fun soma1(a: Double, b: Double) = a + b // Inline Function
 
 // Função como paramêtro
-fun calcular(funcao: (Int, Int) -> Int) {
-    println(funcao(10, 10))
+fun calcular(a: Int, b: Int, funcao: ((Int, Int) -> Int)? ){
+    println(funcao?.let{
+        it(a, b)
+        })
+}
+
+class Caixa {
+    fun processarPrecos(
+        listaPreco: List<Double>,
+        funcOperacao: (Double) -> Double
+    ): List<Double> {
+        return listaPreco.map { funcOperacao(it) }
+    }
+}
+
+fun Int.dobrando(): Int{
+    return this * 2
+}
+
+fun teste(funcao: suspend (String) -> String){
+
+}
+
+fun bbb(a: (Int) -> (Int) -> Int){
+
 }
 
 fun main() {
+/*
+    val funcaoLambida = { nome: String, idade: Int ->
+        println("Executar $nome com $idade")
+    }
 
-    val mat = Matematica()
+    funcaoLambida("Ryan", 20)
+ */
 
-    calcular( mat::soma2)
+    val listaPreco = listOf(10.0, 5.0, 20.0)
+
+    val caixa = Caixa()
+
+    val num: Int = 2
+
+    println(num.dobrando())
+
+
+
+    var retorno = caixa.processarPrecos(listaPreco) { preco ->
+        preco * 0.9
+    }
+
 }
