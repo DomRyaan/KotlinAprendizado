@@ -39,6 +39,8 @@ class Usuario(
 val USER_NAME = "Ryan"
 const val CHAVE = "CHAVE_EXTRA"
 
-fun main() {
 
+typealias ClickHandler = (Usuario) -> Unit
+
+fun main() {
 }

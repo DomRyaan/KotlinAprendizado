@@ -59,8 +59,8 @@ fun main() {
 
     println(num.dobrando())
 
-
-
+    val soma: (Int, Int) -> Int = {a: Int, b: Int -> a + b}
+    
     var retorno = caixa.processarPrecos(listaPreco) { preco ->
         preco * 0.9
     }
